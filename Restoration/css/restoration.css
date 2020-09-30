@@ -1,0 +1,400 @@
+body{
+    margin-left: 0px;
+    margin-right: 0px; 
+    background-color: rgb(226, 226, 226);
+    margin-bottom: 0px;
+}
+/*
+a:visited{
+    color:rgb(56, 100, 243); 
+}
+*/
+.div-head{
+    display: block;
+    background-color: rgb(161, 159, 159); 
+    color: black; 
+    width: 100%;  
+    border-top: 23px solid  rgb(161, 159, 159);
+    border-bottom: 20px solid  rgb(161, 159, 159);
+    border-right: 0px; 
+    margin-top: -10px; 
+    margin-left: 0px; 
+} 
+.div-head h1{
+    font-family: "Lucida Console", Monaco, monospace;
+    display: inline-block;
+    text-transform: uppercase;
+    word-spacing: -3px;
+    letter-spacing: 1.3mm; 
+    padding-left: 15px;
+}
+.bracket-head{
+    font-size: 33pt;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.hr-head{
+    display: block;
+    width: 95%; 
+    margin-left: -25px;
+    animation: hr-move 1.5s ease; 
+}
+@keyframes hr-move{
+    0% {margin-left: -500px; } 
+    100% {margin-left: -25px; }
+}
+.car-icon{
+    position: relative; 
+    height: 30px; 
+    width: 55px;  
+    left: 43px;
+    top: 10px;
+} 
+.nav-buttons{
+    display: inline-block; 
+    padding: 10px 10px 10px 20px;
+    color: white;
+    text-decoration: none; 
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 200; 
+    transition: color 400ms, text-shadow 600ms ease;
+    
+} 
+.nav-buttons:hover{
+    color: black;
+    text-shadow: 0 0 2px rgb(94, 93, 93);
+}
+
+.home-image{
+    display: block;
+    width: 100%;
+    z-index: 1;
+    border-top: 2px solid rgb(56, 100, 243);
+ 
+    
+} 
+#welcome-header{
+    display: inline-block;
+    position: absolute; 
+    top: 300px; 
+    left: 55px;
+    z-index: 2; 
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 17pt;
+    color: rgba(0, 0, 0, 0.616);
+    font-weight: 200;
+} 
+#welcome-paragraph{
+    display: inline-block;
+    position: absolute; 
+    top: 354px; 
+    left: 36px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-transform: uppercase; 
+    font-size: 10pt;
+    letter-spacing: .5rem;
+    animation: letter-space-move 400ms ease;
+}
+@keyframes letter-space-move{
+    0% {letter-spacing: .3rem; left: 72px; opacity: .20 }
+    100% {letter-spacing: .5rem; }
+}
+#welcome-paragraph-line{
+    display: inline-block;
+    position: absolute; 
+    top: 325px; 
+    left: 27px;
+} 
+.pad-between{
+    padding-top: 25px;
+}
+#image-2-text-box{
+    position: absolute; 
+    left: 130px; 
+    top: 1200px; 
+    z-index: 2; 
+    background-color: rgba(8, 8, 8, 0.596); 
+    word-wrap: normal;
+    width: 200px; 
+    border: 3px solid white;
+    border-radius: 10px;
+}
+#image-2-header{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+    text-transform: uppercase;
+    padding-left: 20px;
+    color: white;
+    font-weight: 200;
+    letter-spacing: 1px;
+} 
+#image-2-text-box-button{
+    display: inline-block;
+    position: absolute; 
+    left: 155px; 
+    top: 1460px; 
+    z-index: 2; 
+    background-color: rgba(8, 8, 8, 0.596); 
+    word-wrap: normal;
+    border: 3px solid white;
+    border-radius: 10px; 
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 14pt;
+    padding: 10px 24px;  
+}
+#image-2-text-box-button:hover{
+    border: 3px solid rgb(158, 158, 158);
+    color: rgb(158, 158, 158);
+    background-color: rgba(7, 7, 7, 0.767);
+    text-shadow: 1px 2px 2px rgba(5, 5, 5, 0.938);
+    cursor: pointer;
+}
+.footer p{
+    background-color: rgb(134, 133, 133);
+    border-top: 2px solid rgb(56, 100, 243);
+    border-bottom: 2px solid rgb(56, 100, 243);
+    padding-top: 50px;
+    padding-left: 50px;
+    padding-bottom: 50px;
+    margin-bottom: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(196, 196, 196); 
+    text-shadow: -4px 2px 2px rgba(5, 5, 5, 0.938);
+}
+#road-line{
+    display: inline-block;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(196, 196, 196); 
+    text-shadow: -4px 2px 2px rgba(5, 5, 5, 0.938);
+    padding-left: 100px;
+}
+#road-car-bottom{ 
+    position: relative;
+    left: -475px;
+    height: 31px; 
+    width: 56px;
+}
+
+
+#services-offered-head{
+    display: inline-block;
+    position: absolute; 
+    top: 300px; 
+    left: 1015px;
+    z-index: 2; 
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 19pt;
+    color: rgba(235, 235, 235, 0.616);
+    font-weight: 200;
+}
+
+#services-offered-shade-box{
+    position: absolute; 
+    top: 370px; 
+    left: 920px; 
+    width: 380px; 
+    height: 425px; 
+    background-color:  rgba(8, 8, 8, 0.596); 
+    border-radius: 5px;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.678);
+}
+#services-offered-shade-box ul{
+    display: inline-block;
+    list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAqklEQVRYR+2VQQrCMBREZ7qLd9BeQ9Qr1btYzyTxGs0hzC4j1o2tIJIUAvqz/BD+ywvMEJUPK++HARQZcKdwRcMUu/Uu9yuLAFbnIEC6dW1jAGbADJiB3zHg+uBJbHNf9OmeQD+P7bcodv1wIfktwDOCxTRZTI3DOYwEH4/t/nVe2gUJEGp2gQGYATPw9waGMQGrBdEjtkEqdptDbncURXHu0sW6wACWMHAHj7aIIcC6gUUAAAAASUVORK5CYII=);
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    position: relative;
+    left: 80px;
+    top: 35px;
+    line-height: 4; 
+
+} 
+#appointment-header{
+    color: white; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 26pt; 
+    font-weight: 200;
+    text-align: center;
+    margin: 0; 
+    padding-top: 6%;
+} 
+#appointment-header-id{
+    position: absolute;
+    width: 100%;
+    height: 31%;
+    top: 900px;   
+    background-color:  rgba(8, 8, 8, 0.596); 
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.678);
+} 
+.form-header{ 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 200;
+    font-size: 27pt; 
+    position: relative;
+    left: 3%;
+    margin: 0;
+    padding-bottom: 45px;
+    text-shadow: -2px 2px 2px rgba(53, 53, 53, 0.521);
+}
+#form-header-car{
+    display: inline-block; 
+    position: relative;
+    height: 81px; 
+    left: -90%;
+    top: -15%;
+}
+.form-header-div{
+    height: 200px;
+    width: 200px;
+    margin: 0;
+    float: right;
+}
+.form-label{
+    display: inline-block; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 13pt; 
+    padding-right: 10px;
+    padding-left: 20px; 
+} 
+.input-form{
+    display: inline-block;
+    width: 200px; 
+    height: 26px; 
+    border: 1px solid rgb(56, 100, 243);
+} 
+.form-div-input{
+    margin-left: 58px;
+    padding-bottom: 200px;
+}  
+form{
+    padding-top: 120px;
+}
+#form-div-input-select{
+    margin-left: 140px;
+    padding-bottom: 150px;
+}
+#select-form{
+    display: inline-block;
+    width: 200px; 
+    height: 26px;
+    border: 1px solid rgb(56, 100, 243);
+}
+#form-header-tool{
+    display: inline-block; 
+    position: relative;
+    height: 145px;
+    width: 145px;
+    left: -85%;
+    top: -28%;
+}
+.date-label{ 
+    padding-top: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 13pt; 
+    padding-right: 10px;
+} 
+#date-input{
+    display: inline-block;
+    width: 200px; 
+    height: 26px; 
+    border: 1px solid rgb(56, 100, 243);
+}
+#text-area{
+    border: 1px solid rgb(56, 100, 243);
+}
+#form-header-people{
+    display: inline-block;
+    position: relative;
+    left: -84%; 
+    top: -28%;
+}
+.input-form-bottom{
+    display: inline-block;
+    width: 200px; 
+    height: 26px; 
+    border: 1px solid rgb(56, 100, 243);
+    margin-bottom: 15px;
+}
+.input-form-bottom-div{
+    margin-left: 58px;
+    padding-bottom: 30px;
+    width: 55%;
+} 
+#submit-bottom{
+    display: inline-block;
+    position: relative;   
+    z-index: 2; 
+    left: 88px;
+    background-color: rgba(8, 8, 8, 0.596); 
+    word-wrap: normal;
+    border: 2px solid white;
+    border-radius: 10px; 
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 14pt;
+    padding: 10px 24px;
+}
+#submit-bottom:hover{
+    border: 2px solid rgb(158, 158, 158);
+    color: rgb(158, 158, 158);
+    background-color: rgba(7, 7, 7, 0.767);
+    text-shadow: 1px 2px 2px rgba(5, 5, 5, 0.938); 
+    cursor: pointer;
+}
+#your-info-table{
+    border-spacing: 15px;
+} 
+.table-data-label{
+    margin-right: 0; 
+    width: 120px;
+} 
+#hr-products{
+    background: rgb(158, 158, 158);
+    width: 100%;
+    margin: 30px;
+}
+
+#form-header-about{
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 200;
+    font-size: 27pt; 
+    position: absolute;
+    left: 10%;
+    top: 40%;
+    text-shadow: -2px 2px 2px rgba(189, 189, 189, 0.521);
+} 
+
+#about-text{
+    width: 500px; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 13pt;
+    word-spacing: .2rem;
+    line-height: 1.5rem;
+    text-align: justify;
+    padding: 23px; 
+    background-color: rgba(7, 7, 7, 0.507);
+    position: absolute; 
+    left: 13%; 
+    top: 52%;
+    color: white;
+    text-shadow: 0px 2px 2px rgba(189, 189, 189, 0.322);
+    box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.541);
+    border: 1px rgba(189, 189, 189, 0.322);
+    border-radius: 9px;
+
+}
+
+
+
+
+
+
+
+
+

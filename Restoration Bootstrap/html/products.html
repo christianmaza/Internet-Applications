@@ -1,0 +1,173 @@
+<!DOCTYPE html> 
+<!--Author: Christian Mazariegos
+    Date: 04/03/20-->
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <title>Chris Auto Restoration</title>
+        <link href ="../css/restoration.css" rel= "stylesheet">
+        
+        
+        
+    </head>  
+
+    <body>  
+        <nav class="navbar sticky-top" id = "div-head">
+            <div class= "container-fluid">
+                <h1><span class = "bracket-head">[</span>Chris Auto Restoration<span class= "bracket-head">]</span></h1>
+                <hr class = "hr-head">
+                <div class = "container"></div>
+                <div class="container" id = "bottom-nav-container">
+                    <a class="nav-buttons" href="index.html">Home</a>
+                    <a class="nav-buttons" href="./products.html">Services</a>
+                    <a class="nav-buttons" href="./about.html">About</a> 
+                </div>
+            </div>
+        </nav>
+        <div class = "container-fluid" id = "padding-between-products"></div> 
+        <img src  = "../images/plymouth-cuda.jpg" class = "home-image">
+        <h2 id = "services-offered-head">Services Offered</h2>
+        <div id = "services-offered-shade-box">
+            <ul>
+                <li tabindex="1">Full Restoration</li> 
+                <li tabindex="2">Partial Restoration</li> 
+                <li tabindex="3">Collision Repair</li> 
+                <li tabindex="4">Painting Services</li> 
+                <li tabindex="5">Body Work</li>
+            </ul>
+        </div> 
+        <br>
+        <div id = "appointment-header-id">
+            <h2 id = "appointment-header" data-toggle="tooltip" data-placement="bottom" title="Form Below">Schedule Your Appointment Today!</h2>
+        </div> 
+    
+        
+        <h3 class = "form-header">Car Info:</h3>
+        <form class = "form-inline">
+            <div class = "form-group">
+                <label class = "form-label" for="car-make">Make:</label> 
+                <input class = "form-control" type="text" name="car-make" id="car-make">
+                <label class = "form-label" for="car-model">Model:</label> 
+                <input class = "form-control" type="text" name="car-model" id="car-model"> 
+                <label class = "form-label" for="car-trim">Trim:</label> 
+                <input class = "form-control" type="text" name="car-trim" id="car-trim">
+            </div>
+        </form>
+
+        <h3 class = "form-header">Services Required:</h3>  
+        <form class = "form-inline">
+            <label class = "form-label" for="restoration-type">Restoration Type:</label>
+            <select class = "form-control" name="restoration-type"> 
+                <option value="" disabled selected hidden>Restoration Type</option>
+                <option value="full">Full Restoration</option>
+                <option value="partial">Partial Restoration</option>
+            </select>
+            <label class = "form-label" for="service-collision-repair">Collision Repair:</label>
+            <div class = "checkbox">
+                <input type="checkbox" name="service-collision-repair" id="service-collision-repair">
+            </div>
+            
+            
+            <label class = "form-label" for="service-painting-services">Painting Services:</label>
+            <div class = "checkbox">
+                <input type="checkbox" name="service-painting-services" id="service-painting-services">
+            </div>
+            
+
+            <label class = "form-label" for="service-body-work">Body Work:</label>
+            <div class = "checkbox">
+                <input type="checkbox" name="service-body-work" id="service-body-work">
+            </div>
+        </form>
+        <form>
+            <div class = "form-group">
+                <label class = "form-label">Set appointment date:</p>
+                <input class = "form-control" type="date">
+            </div>
+            <div class = "form-group">
+                <label class = "form-label">Additional Information:</p> 
+                <textarea class = "form-control" name="additional-material" rows="8" cols="80"></textarea>
+            </div>
+        </form>
+
+        <h3 class = "form-header">Your info:</h3>
+        <div class = "container" id = "your-info-container">
+            <div class = "row">
+                <div class = "col-10">
+                    <form>
+                        <div class = "form-group row">
+                            <label class = "col-2 col-form-label" for="first-name">First Name:</label>
+                            <div class = "col-4">
+                                <input class = "form-control" type="text" name="first-name" id="first-name">
+                            </div>
+                            <label class = "col-2 col-form-label" for="last-name">Last Name:</label> 
+                            <div class = "col-4">
+                                <input class = "form-control" type="text" name="last-name" id="last-name">
+                            </div>
+                        </div>
+                        <div class = "form-group row">
+                            <label class="col-2 col-form-label" for="street-address">Address:</label>
+                            <div class = "col-4">
+                                <input class= "form-control" type="text" name="street-address" id="street-address">
+                            </div> 
+                            <label class="col-2 col-form-label" for="city-adress">City:</label>
+                            <div class = "col-4">
+                                <input class="form-control" type="text" name="street-address" id="street-address">
+                            </div>
+                        </div>
+                        <div class = "form-group row">
+                            <label class="col-2 col-form-label" for="state-address">State:</label>
+                            <div class = "col-4">
+                                <input class="form-control" type="text" name="state-address" id="state-address">
+                            </div> 
+                            <label class="col-2 col-form-label" for="zip-address">Zipcode:</label>
+                            <div class = "col-4">
+                                <input class="form-control" type="text" name="zip-address" id="zip-address">
+                            </div>
+                        </div>
+                        <div class = "form-group row">
+                            <label class="col-2 col-form-label" for="tel-client">Telephone:</label>
+                            <div class = "col-4">
+                                <input class="form-control" type="tel">
+                            </div> 
+                            <label class="col-2 col-form-label" for="email-client">Email:</label>
+                            <div class = "col-4">
+                                <input class="form-control" type="email">
+                            </div>
+                        </div>
+                        
+                           
+                        <input id = "submit-bottom" type="submit" value="Schedule Now!">  
+                    </form>
+                </div>
+                <div class = "col">
+
+                </div>
+            </div>
+        </div>
+    </body> 
+        <br>
+        <br>
+    <footer>
+        <div class = "footer">
+            <p>
+                Chris Auto Restoration<br/>
+                3426 SE Madeup Ln<br/>
+                Chicago, IL 57787<br/> 
+                Email: chrisauto@gmail.com<br/> 
+                Phone: (675) 888 9020<span id = "road-line">_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ </span>
+                <img id = "road-car-bottom" src="../images/car-icon-2.png"><br/>
+            </p>
+        </div>
+    </footer> 
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+        </script> 
+</html>

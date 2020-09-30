@@ -1,0 +1,153 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <meta charset="utf-8" /> 
+        <title>Chris Auto Restoration - Services</title> 
+        <link href ="../css/restoration.css" rel= "stylesheet">
+    </head>  
+
+    <body>  
+        <div class= "div-head">
+            <h1><span class = "bracket-head">[</span>Chris Auto Restoration<span class= "bracket-head">]</span></h1>
+                <img class = "car-icon" src="../images/car-icon-2.png">
+                <hr class = "hr-head">
+                <br>
+                <a class="nav-buttons" href="index.html">Home</a>  
+                <a class="nav-buttons" href="./products.html">Services</a>  
+                <a class="nav-buttons" href="./about.html">About</a>
+        </div>
+        <div class = "pad-between"></div> 
+        <img src  = "../images/plymouth-cuda.jpg" class = "home-image">
+        <h2 id = "services-offered-head">Services Offered</h2>
+        <div id = "services-offered-shade-box">
+            <ul>
+                <li tabindex="1">Full Restoration</li> 
+                <li tabindex="2">Partial Restoration</li> 
+                <li tabindex="3">Collision Repair</li> 
+                <li tabindex="4">Painting Services</li> 
+                <li tabindex="5">Body Work</li>
+            </ul>
+        </div> 
+        <br>
+        <div id = "appointment-header-id">
+            <h2 id = "appointment-header">Schedule Your Appointment Today!</h2>
+        </div> 
+
+        <form>
+            <h3 class = "form-header">Car Info:</h3>
+            <div class = "form-header-div">
+            <img src="../images/car-icon-2.png" id = "form-header-car">
+            </div>
+            <div class = "form-div-input">
+                <label class = "form-label" for="car-make">Make:</label> 
+                <input class = "input-form" type="text" name="car-make" id="car-make">
+                <label class = "form-label" for="car-model">Model:</label> 
+                <input class = "input-form" type="text" name="car-model" id="car-model"> 
+                <label class = "form-label" for="car-trim">Trim:</label> 
+                <input class = "input-form" type="text" name="car-trim" id="car-trim">
+            </div>
+            <h3 class = "form-header">Services Required:</h3>
+            <div id = "form-div-input-select">
+                <div class = "form-header-div">
+                    <img src="../images/general, wrench, screwdriver, tool, tools, repair, repair tool png icon.png" id = "form-header-tool">
+                </div>  
+                <select id = "select-form" name="restoration-type"> 
+                    <option value="" disabled selected hidden>Restoration Type</option>
+                    <option value="full">Full Restoration</option>
+                    <option value="partial">Partial Restoration</option>
+                </select>
+                <label class = "form-label" for="service-collision-repair">Collision Repair:</label>
+                <input type="checkbox" name="service-collision-repair" id="service-collision-repair">
+                <label class = "form-label" for="service-painting-services">Painting Services:</label>
+                <input type="checkbox" name="service-painting-services" id="service-painting-services"> 
+                <label class = "form-label" for="service-body-work">Body Work:</label>
+                <input type="checkbox" name="service-body-work" id="service-body-work">
+                <p class = "date-label">Set appointment date:</p>
+                <input id = "date-input" type="date">
+                <p class = "date-label">Additional Information:</p> 
+                <textarea id = "text-area" name="additional-material" rows="8" cols="80"></textarea>
+            </div>
+            <h3 class = "form-header">Your info:</h3>
+            <div class = "form-header-div">
+                <img src="../images/people.png" id = "form-header-people">
+            </div>
+            <div class = "input-form-bottom-div">
+                <table id = "your-info-table">
+                    <tr>
+                        <td class = "table-data-label">
+                            <label class = "form-label" for="first-name">First Name:</label>
+                        </td>
+                        <td>
+                            <input class = "input-form-bottom" type="text" name="first-name" id="first-name">
+                        </td>
+                        
+                        <td class = "table-data-label">
+                            <label class = "form-label" for="last-name">Last Name:</label>
+                        <td>
+                            <input class = "input-form-bottom" type="text" name="last-name" id="last-name">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class = "table-data-label">
+                            <label class = "form-label" for="street-address">Address:</label>
+                        </td>
+                        <td>
+                            <input class = "input-form-bottom" type="text" name="street-address" id="street-address">
+                        </td>
+                        <td class = "table-data-label">
+                            <label class = "form-label" for="city-adress">City:</label>
+                        </td>
+                        <td>
+                            <input class = "input-form-bottom" type="text" name="street-address" id="street-address">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class = "table-data-label">
+                            <label class = "form-label" for="state-address">State:</label>
+                        </td>
+                        <td>
+                            <input class = "input-form-bottom" type="text" name="state-address" id="state-address">
+                        </td>
+                        <td class = "table-data-label">
+                            <label class = "form-label" for="zip-address">Zipcode:</label>
+                        </td>
+                        <td>
+                            <input class = "input-form-bottom" type="text" name="zip-address" id="zip-address">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class = "table-data-label">
+                            <label class = "form-label" for="tel-client">Telephone:</label>
+                        </td>
+                        <td>
+                            <input class = "input-form-bottom" type="tel">
+                        </td>
+                        <td class = "table-data-label">
+                            <label class = "form-label" for="email-client">Email:</label>
+                        </td>
+                        <td>
+                            <input class = "input-form-bottom" type="email">
+                        </td>
+                    </tr>
+                </table>
+                <hr id = "hr-products">
+            </div>
+            <input id = "submit-bottom" type="submit" value="Schedule Now!">  
+        </form>
+        
+    </body> 
+        <br>
+        <br>
+    <footer>
+        <div class = "footer">
+            <p>
+                Chris Auto Restoration<br/>
+                3426 SE Madeup Ln<br/>
+                Chicago, IL 57787<br/> 
+                Email: chrisauto@gmail.com<br/> 
+                Phone: (675) 888 9020<span id = "road-line">_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ </span>
+                <img id = "road-car-bottom" src="../images/car-icon-2.png"><br/>
+            </p>
+        </div>
+    </footer> 
+</html>
