@@ -1,0 +1,42 @@
+<html>
+<head><title>winningStreak</title></head>
+<body>
+	<script type="text/javascript">
+
+var dukeScores  = [72, 74, 84, 92, 93, 66, 69, 73, 70, 85, 75, 67, 79, 84, 89, 94, 100, 74];
+var ncScores    = [76, 73, 77, 90, 81, 74, 53, 68, 88, 84, 58, 81, 73, 78, 70, 83, 92, 32];
+var winningTeam = [];
+
+for(i = 0; i < dukeScores.length; i++){
+   if (dukeScores[i] > ncScores[i]) {
+      document.writeln("Duke won " + dukeScores[i] + "-" + ncScores[i] + "." + "<br>");
+      winningTeam[i] = "D";
+   }
+   else {
+      document.writeln("North Carolina won " + ncScores[i] + "-" + dukeScores[i] + "." + "<br>");
+      winningTeam[i] = "N";
+   }
+} 
+for(var winning of winningTeam){
+   document.writeln("Winning Teams: " + winning + "<br>"); 
+}
+
+var streak = 0; 
+var longestStreak = 0;
+
+winningTeam.forEach(function(item, index){
+   if(item == "D"){
+      streak++;
+      if(streak > longestStreak){
+      longestStreak++;
+      }
+   }
+   else{
+      streak = 0;
+   }
+});  
+
+document.writeln(longestStreak + "<br>");
+    </script>
+</body>
+</html>

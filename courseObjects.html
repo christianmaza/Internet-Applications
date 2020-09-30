@@ -1,0 +1,46 @@
+<html>
+<head><title>courseObjects</title></head>
+<body>
+	<script type="text/javascript">
+
+// Define the courses associative array
+var courses = { 
+   170: {
+      title: "Introduction to Programing", 
+      description: "Develop algorithms", 
+      creditHours: 5
+   }, 
+   250: {
+      title: "Web Development", 
+      description: "Build web applications", 
+      creditHours: 3
+   }, 
+   310: {
+      title: "Operating Systems", 
+      description: "Process management and memory management", 
+      creditHours: 3 
+   }, 
+   430: {
+      title: "Artificial Intelligence", 
+      description: "Simulate human thinking", 
+      creditHours: 2 
+   }
+      
+      
+}
+// Display all the values in the courses associative array 
+for(var courseIterate in courses){
+   document.writeln(courseIterate + "- " + courses[courseIterate].title + ", " + courses[courseIterate].description + ", "+ courses[courseIterate].creditHours + "<br>"); 
+} 
+
+courseIterate = Object.keys(courses);
+document.writeln(courseIterate.length + "<br>"); 
+for(courseIterate in courses){
+   if(courses[courseIterate].creditHours == 3){
+      document.writeln(courseIterate + "- " + courses[courseIterate].title + "<br>");
+   }
+}
+
+    </script>
+</body>
+</html>

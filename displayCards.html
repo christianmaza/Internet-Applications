@@ -1,0 +1,49 @@
+<html>
+<head><title>displayCards</title></head>
+<body>
+	<script type="text/javascript">
+
+// rank should be a number between 1 and 13, and suit between 0 and 3.
+function displayCard(rank, suit) {
+   switch (rank) {
+      case 1: rank = "A"; break;
+      case 10: rank = "T"; break;
+      case 11: rank = "J"; break;
+      case 12: rank = "Q"; break;
+      case 13: rank = "K"; break;
+      default: if (rank < 1 || rank > 13) {
+         document.writeln("Bad rank value: " + rank + "<br>");
+      }
+   }
+   
+   switch (suit) {
+      case 0: suit = "♥"; break;
+      case 1: suit = "♦"; break;
+      case 2: suit = "♣"; break;
+      case 3: suit = "♠"; break;
+      default:  document.writeln("Bad suit value: " + suit + "<br>");      
+   }
+
+   
+   document.writeln("┌─────┐" + "<br>");
+   document.writeln("│" + rank + suit + "   │" + "<br>");
+   document.writeln("│     │" + "<br>");
+   document.writeln("│   " + rank + suit + "│" + "<br>");
+   document.writeln("└─────┘" + "<br>");
+}
+
+displayCard(5, 0);   // 5 of Hearts
+displayCard(13, 1);  // K of Diamonds
+displayCard(1, 2);   // A of Clubs
+displayCard(10, 3);  // 10 of Spades 
+
+document.writeln("******************************<br>");
+
+for(var i = 0; i < 10; i++){
+   displayCard((Math.floor(Math.random() * 13) + 1), (Math.floor(Math.random() * 4)))
+}
+
+
+    </script>
+</body>
+</html>

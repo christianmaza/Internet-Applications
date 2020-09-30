@@ -1,0 +1,75 @@
+<html>
+<head><title>WebSockets</title>
+   <style>
+      body { 
+         word-wrap: break-word;
+      }
+
+      div {
+         margin-bottom: 20px;  
+      }
+   </style>
+</head>
+<body>
+   <div>
+      <button id="connectBtn">Connect</button>
+      <button id="disconnectBtn">Disconnect</button>
+      <p>Status: <span id="connectionStatus"></span></p>
+   </div>
+
+   <div>
+      <input type="text" id="message">
+      <button id="sendBtn">Send</button>
+   </div>
+
+   <div>
+   Parrot's response: <strong id="response"></strong>
+   </div>
+</body>
+<script type="text/javascript">
+   
+    var connectionStatus = document.getElementById("connectionStatus");
+    var response = document.getElementById("response");
+    var message = document.getElementById("message");
+    connectionStatus.innerHTML = "Disconnected";
+    var websocket = null;
+
+    document.getElementById("connectBtn").addEventListener("click", function() {
+       // User pressed Connect button
+       // Connect the websocket to wss://echo.websocket.org/ and 
+       websocket = new WebSocket("wss://echo.websocket.org/");
+       // create open, close, and message event callbacks
+       websocket.onopen = function(){
+          connectionStatus.innerHTML = "Connected"; 
+       }; 
+       websocket.onclose = function(){
+          connectionStatus.innerHTML = "Disconnected";
+       }
+       
+       websocket.onmessage = function(e){
+          response.innerHTML = e.data;
+       }
+       
+       websocket.onerror = function(e) { 
+          alert("Error!");
+       };
+    });
+
+    document.getElementById("disconnectBtn").addEventListener("click", function() {
+       // User pressed Disconnect button
+       websocket.close();
+    });
+
+    document.getElementById("sendBtn").addEventListener("click", function() {
+       // User pressed Send button
+       
+       // Make sure valid connection exists before sending a message
+       if (websocket === null || websocket.readyState !== WebSocket.OPEN) {
+          alert("Connect before you send.");
+       }
+       else {
+          websocket.send(message.value);
+       }
+    });
+  </script>
+</html>

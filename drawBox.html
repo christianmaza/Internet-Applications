@@ -1,0 +1,19 @@
+<html>
+<head><title>DrawBox</title></head>
+<body>
+	<script type="text/javascript">
+
+        function drawBox(numRows, numCols, boxChar){
+        for (var r = 0; r < numRows; r++) {
+            var line = "";
+            for (var c = 0; c < numCols; c++) {
+                line += boxChar;
+            }
+            console.log(line);
+        }
+        }
+
+        drawBox(2,6,"^");
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<html>
+<head><title>Criminal Message-JS Regex</title></head>
+<body>
+	<script type="text/javascript">
+        /*
+        A government agency has learned that a criminal organization is using Reddit to communicate. To keep from being detected, the criminals are posting 
+        comments that look innocuous but use a secret pattern: One or more digits followed by any number of characters, followed by the word "star". However, 
+        the letters in the word "star" may be separated by a single space. Ex: "starring", "blast ark", and "st a r" are all legitimate ways of including the 
+        word "star" in a posting.
+
+        Loop through the Reddit posts in the posts array and output to the console the lines that match the criminal's pattern. Use a single regex to identify 
+        the suspected posts. Hint: The 2nd, 3rd, and 5th lines should match the regex.
+
+        The regex should match uppercase or lowercase letters. To create a case-insensitive regex, place the letter "i" at the end of the regex. 
+        Ex: /myRegex/i matches "myregex" and "MYregEX".
+        */
+        var posts = [
+        "The starting time was 6pm.",
+        "If the 2nd string QB gets hurt, they have no starting QB.",
+        "My email is sis1@yahoo.com.  Last are first.",
+        "Stare into the abyss 1 time.",
+        "90210 for Beverly Hills. Thick as TAR.",
+        "I'm 3 a superstar"
+        ];
+
+        var re = /\d+.+s\s?t\s?a\s?r\s?/i
+        for(var x of posts){
+        if(re.test(x)){
+            document.writeln(x + "</br>");
+        }
+        }
+    </script>
+</body>
+</html>

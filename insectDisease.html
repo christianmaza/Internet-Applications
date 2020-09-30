@@ -1,0 +1,18 @@
+<html>
+<head><title>insectDisease</title></head>
+<body>
+	<script type="text/javascript">
+
+    var weekCount = 1; 
+    var insectPop = 2; 
+
+    do{     if(weekCount % 4 == 0){
+                insectPop = insectPop * 0.40;
+            }
+            document.writeln("insectPop: "+insectPop+ " weekCount: "+weekCount+"<br>"); 
+            insectPop *= 2; 
+            weekCount++;
+    }while(insectPop <= 10000);
+    </script>
+</body>
+</html>

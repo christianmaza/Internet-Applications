@@ -1,0 +1,31 @@
+<html>
+<head><title>actorLookup</title></head>
+<body>
+	<script type="text/javascript">
+
+var movie = { // Code will be tested with different actors and movies
+   name: "Interstellar",
+   director: "Christopher Nolan",
+   composer: "Hans Zimmer",
+   cast: {
+      "Matthew McConaughey": "Cooper",
+      "Anne Hathaway": "Brand",
+      "Jessica Chastain": "Murph",
+      "Matt Damon": "Mann",
+      "Mackenzie Foy": "Young Murph"
+   },
+   roleOf: function(actorName) {
+
+        if(!(actorName in this.cast)){
+        return document.writeln("Not in this movie. "); 
+    }
+    return document.writeln(this.cast[actorName]);
+
+    }
+}; 
+
+movie.roleOf("Anne Hathaway");
+
+    </script>
+</body>
+</html>

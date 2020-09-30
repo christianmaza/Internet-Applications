@@ -1,0 +1,73 @@
+<html>
+<head>
+	<title>Objects</title>
+	<script>
+//		var dog = new Object();
+//		alert(dog);
+		
+		var toy = new Object();
+		toy.name = "Lego";
+		toy.color = "red";
+		toy.shape = "rectangle";
+		toy.size = "small";
+		toy.display = printObject;
+		
+		function printObject()
+		{
+			document.writeln("<b>The toy is a " + toy.name + "<br/>");
+			document.writeln("It is a " + toy.color + 
+							 " " + toy.shape + " "  + toy.size + "<br/>");
+		}
+
+		// define an object to model a car
+		var car = new Object();
+		// car attributes
+		car.color = "purple";
+		car.make = "Cadillac";
+		car.model = "El Dorado";
+		car.year = "1965";
+		car.engine = "350V8";
+		car.rimsize = "24";
+		car.weight = "2500";
+		car.mileage = "40000";
+		car.direction = "parked";
+		car.turn = "left";
+		// car methods
+		car.changeDirection = drive;
+		car.changeColor = paintJob;
+		car.turning = turn;
+		
+		function drive(inDirection)
+		{
+			car.direction = inDirection;
+		}
+		
+		function paintJob(newColor)
+		{
+			car.color = newColor;
+		}
+		
+		function turn()
+		{
+			document.writeln("Turning " + car.turn);
+		}
+		</script>
+</head>
+<body>
+	<script type="text/javascript">
+		document.writeln("<br>The toy is a " + toy.name );
+		document.writeln("<br> It is a " + toy.color + " " + toy.shape);
+		document.writeln("<br/>toy.display<br/>");
+		toy.display;
+		document.writeln("toy.display()");
+		toy.display();
+		toy.color = "blue";
+		toy.display();
+/*
+		car.changeColor("blue");
+		//		document.writeln("<br/>My car is a " + car.make + " " + car.model);
+//		car.turning();
+//		document.writeln("<br/>The mileage is " + car.mileage);*/
+	</script>
+</body>
+</html>

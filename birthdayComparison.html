@@ -1,0 +1,63 @@
+<html>
+<head><title>birthdayComparison</title></head>
+<body>
+	<script type="text/javascript">
+
+var notablePeople = {
+   "Elvis Presley":         new Date(1935, 0, 8),
+   "Sonya Sotomayor":       new Date(1954, 5, 25), 
+   "Franklin D. Roosevelt": new Date(1882, 0, 30),
+   "Ben Carson":            new Date(1951, 8, 18),
+   "Roger Staubach":        new Date(1942, 1, 5), 
+   "Steve Jobs":            new Date(1955, 1, 24),    
+   "Albert Einstein":       new Date(1879, 2, 14),  
+   "Isaac Asimov":          new Date(1919, 9, 4),
+   "Jada Pinkett Smith":    new Date(1971, 8, 18),
+   "Grace Hopper":          new Date(1906, 11, 9), 
+   "Chris Maza":            new Date(1997, 08, 29)
+};
+
+// Convert the day number (0-6) into a day name (Sunday-Saturday)
+function convertDayNumberToWord(dayNum) {
+   var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+   return days[dayNum];
+}
+
+// Display all names and birthdays
+for (var person in notablePeople) {
+   document.writeln(person + ": " + (notablePeople[person].getMonth() + 1) + "/" + notablePeople[person].getDate() + "/" + notablePeople[person].getFullYear()+ "<br>"); 
+}
+
+
+// Find who is closest in age to Sonya Sotomayor
+var sonyaAge = notablePeople["Sonya Sotomayor"].getTime();
+var ageDifference = Infinity;
+for (person in notablePeople) {
+   // See if this person's age difference is closer
+   if (person != "Sonya Sotomayor" && Math.abs(notablePeople[person].getTime() - sonyaAge) < ageDifference) {
+      ageDifference = Math.abs(notablePeople[person].getTime() - sonyaAge);
+   }
+}
+
+document.writeln("\nClosest age difference is " + (ageDifference / 1000 / 60 / 60 / 24) + "<br>");
+
+// Find who was born on the same day of the week
+document.writeln("Birthdays on same day of the week: <br>");
+var names = Object.keys(notablePeople);
+var i, j;
+var sameDay;
+for (i = 0; i < names.length - 1; i++) {
+   for (j = i + 1; j < names.length; j++) { 
+      if(notablePeople[names[i]].getDay() === notablePeople[names[j]].getDay()){
+         sameDay = notablePeople[names[i]].getDay();
+         document.writeln("Comparing " + names[i] + " to " + names[j] + "<br>");
+         document.writeln(notablePeople[names[i]].getDay() + " and " +
+            notablePeople[names[j]].getDay() + "<br>"); 
+         document.writeln("Both on: " + convertDayNumberToWord(sameDay) + "<br>");
+      }
+   }
+}
+
+    </script>
+</body>
+</html>

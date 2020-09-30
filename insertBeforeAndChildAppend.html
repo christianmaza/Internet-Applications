@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+           InsertBeforeAndAppend 
+        </title>
+    </head>
+    <body>
+
+        <ul id="myList">
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>dodo</li>
+        </ul>
+
+        <p>Click the button to insert an item to the list.</p>
+
+        <button onclick="myFunction()">Insert Before</button> 
+        <button onclick="myOtherFunction()">AppendChild</button>
+
+
+        <p><strong>Example explained:</strong><br>First create a LI node,<br> then create a Text node,<br> then append the Text node to the LI node.<br>Finally insert the LI node before the second child node in the list.</p>
+
+        <script>
+        function myFunction() {
+            var newItem = document.createElement("LI");
+            var textnode = document.createTextNode("Water");
+            newItem.appendChild(textnode);
+
+            var list = document.getElementById("myList");
+            list.insertBefore(newItem, list.children[1]);
+        }
+        function myOtherFunction(){
+            var newItem = document.createElement("LI");
+            var textnode = document.createTextNode("Woop");
+            newItem.appendChild(textnode);
+
+            var list = document.getElementById("myList");
+            list.appendChild(newItem);
+        }  
+        </script>
+
+    </body>
+</html>

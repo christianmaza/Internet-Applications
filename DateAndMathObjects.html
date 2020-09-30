@@ -1,0 +1,77 @@
+<HTML>
+<head>
+	<title>Date and Math Objects</title>
+	<script>
+	</script>
+</head>
+<body>
+	<script type="text/javascript">
+	/*
+		document.writeln("---------- DATE OBJECT ----------<br/>");
+		var date = new Date();
+		document.writeln("Current Date and Time = " + date + "<br/><br/>");
+
+
+		var date = new Date("March 14, 2016 8:30:00");
+		document.writeln("Specific Date and Time = " + date + "<br/><br/>");
+
+
+		var date = new Date("October 14, 2015");
+		document.writeln("Specific Date = " + date + "<br/><br/>");
+
+		var date = new Date(14, 11, 16);
+		document.writeln("Date passing two-digit year, month, day = " + date + "<br/><br/>");
+
+		var date = new Date(2015, 2, 25);
+		document.writeln("Date passing four-digit year, month, day, hour, minute, second = " + date + "<br/><br/>");
+
+		var date = new Date(2015, 2, 25, 18, 59, 23);
+		document.writeln("Date passing four-digit year, month, day, hour, minute, second = " + date + "<br/><br/>");
+
+		var date = new Date(5000000000000000);
+		document.writeln("Date passing milliseconds = " + date + "<br/><br/>");
+
+		var date = new Date(-500000000000000);
+		document.writeln("Date passing milliseconds = " + date + "<br/><br/>");
+
+		var date = new Date();
+		document.writeln("Today's date is " + date);
+		document.writeln("<br/>Get hours = " + date.getHours() + "<br/><br/>");
+		document.writeln("Get minutes = " + date.getMinutes() + "<br/><br/>");
+		document.writeln("Get seconds = " + date.getSeconds() + "<br/><br/>");
+		<!-- not advertised before the year 2000 crisis --> 
+		document.writeln("Get year = " + date.getYear() + "<br/><br/>");
+		document.writeln("Get full year = " + date.getFullYear() + "<br/><br/>");
+		<!-- these are the two attributes of the Date object that start at 0 instead of 1 -->
+		document.writeln("Get month = " + date.getMonth() + "<br/><br/>");
+		document.writeln("Get day of the week = " + date.getDay() + "<br/><br/>");
+        document.writeln("Get milliseconds = " + date.getMilliseconds());*/
+
+		document.writeln("---------- MATH OBJECT ----------<br/>");
+		var num = 16;
+		document.writeln("The number is = " + num + "<br/>");
+		document.writeln("Square root of number is = " + Math.sqrt(num) + "<br/>");
+		document.writeln("Number raise to the 3rd power is = " + Math.pow(num,3) + "<br/>");
+		document.writeln("JavaScript PI = " + Math.PI + "<br/>");
+		document.writeln("Documented:  Decimal: The first 100 decimal digits are 3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679<br/>");
+	
+		var nextNum = 7.5;
+		document.writeln("<br/>Nextnumber is = " + nextNum + "<br/>");
+		document.writeln("Next number rounded up = " + Math.ceil(nextNum) + "<br/>");
+		document.writeln("Next number rounded down = " + Math.floor(nextNum) + "<br/>");
+		document.writeln("Next number rounded = " + Math.round(nextNum) + "<br/>");
+
+		document.writeln("<br/>Random number is (values between 0 - 1) = " + Math.random() + "<br/>");
+		// scaling factor, scale of 0 - 99 
+		document.writeln("<br/>Random number seeded is (values between 0 - 1 multiplied by the seed value) = " + 
+				Math.random() * 6 + "<br/>");
+		// for our lab, we want to use this methodology!!!!
+		document.writeln("<br/>Random number seeded as whole number is (values between 0 - 1 multiplied by the seed value using Math.floor) = " + 
+				Math.floor(Math.random() * 6) + "<br/>");
+		// shifting factor
+		document.writeln("<br/>Random number seeded as whole number is (values between 0 - 1 multiplied by the seed value using Math.floor) = " + 
+				(Math.floor(Math.random() * 6) + 1) + "<br/>");
+		
+		</script>
+	</body>
+</HTML>

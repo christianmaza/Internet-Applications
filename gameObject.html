@@ -1,0 +1,27 @@
+<html>
+<head><title>gameObject</title></head>
+<body>
+	<script type="text/javascript">
+
+var game = { 
+   winner: { 
+      winningTeamName: "Midas",
+      winningTeamScore: 23, 
+   },
+   loser: {
+      losingTeamName: "Ballers",
+      losingTeamScore: 20
+   }, 
+   
+   getMarginOfVictory: function(){
+      var margin = this.winner.winningTeamScore - this.loser.losingTeamScore;
+      return margin; 
+   } 
+}; 
+
+document.writeln(game.winner.winningTeamName + ": " + game.winner.winningTeamScore + "<br>"); 
+document.writeln(game.loser.losingTeamName + ": " + game.loser.losingTeamScore + "<br>");  
+document.writeln("Margin of Victory: "+ game.getMarginOfVictory() + "<br>");
+    </script>
+</body>
+</html>

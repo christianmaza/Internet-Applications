@@ -1,0 +1,47 @@
+<html>
+<head><title>classesJS</title></head>
+<body>
+	<script type="text/javascript">
+
+      // Student class
+      function Student(name, gpa) {
+         this.name = name;
+         this.gpa = gpa;
+      }
+
+      function Course(title) {
+         this.title = title; 
+         this.students = [];
+      }
+
+      Course.prototype.addStudent = function(name,gpa){
+         name = name; 
+         gpa = gpa
+         var studentFunc = new Student(name, gpa); 
+         this.students.push(studentFunc);
+      } 
+
+      Course.prototype.displayStudents = function(){
+         document.writeln(this.title + "<br>");
+         for(var i = 0; i < this.students.length; i++){
+         document.writeln(this.students[i].name+" - "+this.students[i].gpa + "<br>"); 
+         }
+      }
+
+
+
+      var course1 = new Course("Economics");
+      course1.addStudent("Jane", 5.0);
+      course1.addStudent("Kayle", 3.0); 
+      course1.addStudent("John", 4.5)
+      course1.displayStudents();
+
+      var course2 = new Course("History");
+      course2.addStudent("Jenny", 2.6);
+      course2.addStudent("Kyle", 3.5); 
+      course2.addStudent("Susan", 4.5)
+      course2.displayStudents();
+
+    </script>
+</body>
+</html>

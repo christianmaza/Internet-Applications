@@ -1,0 +1,239 @@
+<!doctype html>
+<html> 
+<head> 
+<title> Control Flow</title> 
+</head> 
+<body> 
+	<pre>
+	<script language="JavaScript"> 
+/*
+		document.writeln("----------  if Conditional ----------\n");
+		var age = 19;
+		if(age >= 18)
+			document.writeln("You are old enough to vote<br>");
+
+		document.writeln("----------  if/else Conditional ----------");
+		var age = prompt("How old are you?", "");
+		if (age >= 55)
+			document.writeln("You qualify for the senior citizen rate<br>");
+		else
+			document.writeln("Your rate is based on regular adult");
+
+		document.writeln("\n----------  ternary Conditional ----------");
+		var age = prompt("How old are you?", "");
+		var price = (age >= 55) ? 0 : 20.59;
+        // if portion is first (ag >= 55)
+        // true result is second, between the ? and :
+        // false result is last, after the the :
+		document.writeln("Your price is $" + price);
+
+		document.writeln("\n----------  if/else if Conditional ----------");
+		var grade = prompt("Enter your class average", "");
+		if (grade >= 90)
+			document.writeln("You earned a A");
+		else if (grade >= 80)
+			document.writeln("You earned an B");
+		else if (grade >= 70)
+			document.writeln("You earned a C");
+		else if (grade >= 60)
+			document.writeln("You earned a D");
+		else 
+			document.writeln("You earned an F");
+        // else leg is NOT required
+
+		// incorrect logic flow results in the incorrect answer
+		var grade = prompt("Enter your class average", "");
+//		if (grade >= 60)
+		if(grade >= 60 && grade <= 69)
+			document.writeln("You earned a D");
+//		else if (grade >= 70)
+		else if (grade >= 70 && grade <= 79)
+			document.writeln("You earned an C");
+//		else if (grade >= 80)
+		else if (grade >= 80 && grade<= 89)
+			document.writeln("You earned a B");
+		else if (grade >= 90)
+			document.writeln("You earned a A");
+		else 
+			document.writeln("You earned an F");
+
+		// don't forget the break; statement!
+		document.writeln("\n----------  switch Conditional ----------");
+		var size = parseInt(prompt("Enter your shoe size", ""));
+		switch (size)
+		{
+			// if(size == 10)
+			case 10: 
+				document.writeln("<br>We have 2 pairs size 10 in stock");
+				break;
+			// if(size == 9)
+			case 9:
+				document.writeln("<br>We have 20 pairs size 9 in stock");
+				break;
+			// if(size == 8)
+			case 8:
+				document.writeln("<br>We have 13 pairs size 8 in stock");
+				break;
+			// if(size == 7)
+			case 7: 
+				document.writeln("<br>We have 4 pairs size 7 in stock");
+			break;
+			// if(size == 6)
+			case 6:
+				document.writeln("<br>We have 3 pairs size 6 in stock");			
+				break;
+			// if(size == 5)
+			case 5:
+				document.writeln("<br>We have 1 pair size 5 in stock");
+				break;
+			// if(size == 4 || size == 3 || size == 2 || size == 1)
+			case 4:
+			case 3:
+			case 2:
+			case 1:
+				document.writeln("<br>That is not a real size, try children's shoes!");
+				break;
+			// else
+                // default is NOT required
+			default:
+				document.writeln("<br>We do not have your size in the selected shoe");
+				break;
+		}
+		
+	
+		document.writeln("\n----------  while Loop ----------");
+		var i = 10;
+		while( i < 10)
+		{
+			document.writeln("<br>while i = " + i);
+			i++;
+			document.writeln("<br>while i after increment = " + i);
+		}
+
+		document.writeln("\n----------  do/while Loop ----------");
+		var i = 0;
+
+		do {
+			document.writeln("<br>do/while i = " + i);
+			i++;
+		} while( i < 10)
+            
+
+		document.writeln("\n----------  for Loop ----------");
+		
+		var investment = 50000;
+		var rate = 0.06;
+		var amount = 0;
+		var year = 0;
+	
+		for(year = 0; year < 10; year++) 
+		{
+			amount = investment * (1.0 + rate * year);    
+			document.writeln("<br>Year " +  year + " balance = " + parseInt(amount));
+		}
+		
+		document.writeln("<br>Year " +  year);		
+
+		document.writeln("\n----------  break Loop ----------");
+		var counter = 0;
+		while(true)
+		{
+			if(counter == 7) {
+				document.writeln("<br>counter == " + counter + " BREAK!");
+				//exit loop!
+				break;
+			}
+
+			document.writeln("<br>counter = " + counter);
+			
+			counter++;
+		}
+		
+		document.writeln("\nafter close curly brace of while loop");
+
+
+		
+		document.writeln("\n----------  continue Loop ----------");
+		for(var i = 0; i < 10; i++) {
+
+		
+//		while (i < 10)
+			if (i == 3 || i == 4)
+			{
+				document.writeln("<br>i == 3 || i ==4 CONTINUE!");
+				continue;
+			}
+			
+			//i++;
+			document.writeln("<br>for i = " + i);
+		}
+*/
+		<!-- nested loops -->
+		var asterisk = "*";
+		
+		rowlabel: for (var row = 0; row < 5; row++)
+		{
+			document.write("row = "  + row + ": ");
+			collabel: for (var column = 0; column < 3; column++)
+			{
+				document.write("column = "  + column + " ");
+//				document.write(asterisk);	
+				if(col == 2)
+					break rowlabel;
+			}
+			document.write("\n");
+		}
+			
+
+/*	
+		<!-- creating variables -->
+		const TAXRATE = .065;
+		var itemOne = 123.89;
+		var itemTwo = 92.71;
+		var itemThree = 34.76;
+		var itemFour = 9.33;
+		var subtotal;
+		var salesTax;
+		var total;
+		
+		<!-- calculating the subtotal as one statement -->
+		subtotal = itemOne + itemTwo + itemThree + itemFour;
+
+		document.writeln("Subtotal (one statement) = $" + subtotal + "<br>");
+		
+		<!-- alternative using compound assignment operators -->
+		subtotal = 0;
+		subtotal += itemOne;
+		subtotal += itemTwo;
+		subtotal += itemThree;
+		subtotal += itemFour;
+		
+		document.writeln("Subtotal (compound assingment operator) = $" + subtotal + "<br>");
+		
+		<!-- calculating sales tax -->
+		salesTax = subtotal * TAXRATE; 
+		
+		document.writeln("Sales Tax (raw) = $" + salesTax + "<br>");
+		
+		<!-- explicitly setting two decimal places after the decimal point -->
+		<!-- be careful, salesTax is now considered a string!  -->
+		salesTax = parseFloat(salesTax).toFixed(2);
+		
+		document.writeln("Sales Tax (formatted and now a string) = $" + salesTax + "<br>");
+
+		<!-- calculating total sale -->
+		total = subtotal + salesTax;
+
+		document.writeln("Total Sale (without parseFloat) = $" + total + "<br>");		
+
+		total = subtotal + parseFloat(salesTax);
+		
+		<!-- explicitly setting two decimal places after the decimal point -->
+		total = parseFloat(total).toFixed(2);
+		
+		document.writeln("Total Sale (with parseFloat)= $" + total + "<br>");	
+        */
+	</script>
+	</pre>	
+</body> 
+</html> 

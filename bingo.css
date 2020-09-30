@@ -1,0 +1,47 @@
+td{
+    font-family: Arial, Helvetica, sans-serif;
+    color: black; 
+    padding: 1px; 
+    width: 50px; 
+    height: 50px; 
+    text-align: center;
+    border: 5px solid rgb(220,222,203); 
+    background-color: #eee;
+    cursor: pointer;
+} 
+#free{
+    color: lightgray;
+    background-color: white;
+    cursor: pointer;
+}
+h1, h3, h3 a{
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: center;
+	padding: 5px;
+	color: black;
+	background-color: rgb(238,238,238);
+	border: 2px solid rgb(220,222,203);
+}
+/*There weren't any element with the class ".bingohead" in the original HTML file or any
+ instructions telling me to create an element with the class ".bingohead" :( 
+*/
+.bingohead{
+    border: "";
+}
+/*adjusting the image width */
+#imgId{
+    width: 322px;
+    height: 100px;
+    display: block;
+    margin: auto;
+
+}
+/*aligning all elements within the div to the center as well as giving it a defined width */
+#page{
+    margin: auto;
+    width: 322px;
+}
+/*centering the table */ 
+#tableBingo{
+    margin: auto;
+}
